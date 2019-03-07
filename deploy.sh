@@ -8,6 +8,6 @@ docker push moylette/multi-server:$SHA
 docker push moylette/multi-worker:latest
 docker push moylette/multi-worker:$SHA
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment server=moylette/multi-client:$SHA
+kubectl set image deployments/client-deployment client=moylette/multi-client:$SHA
 kubectl set image deployments/server-deployment server=moylette/multi-server:$SHA
-kubectl set image deployments/worker-deployment server=moylette/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=moylette/multi-worker:$SHA
