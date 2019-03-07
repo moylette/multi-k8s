@@ -1,6 +1,6 @@
-docker build -t moylette/multi-client:latest -t moylette/multi-client:$SHA -f client/Dockerfile ./client
-docker build -t moylette/multi-server:latest -t moylette/multi-server:$SHA  -f server/Dockerfile ./server
-docker build -t moylette/multi-worker:latest -t moylette/multi-worker:$SHA  -f worker/Dockerfile ./worker
+docker build -t moylette/multi-client:latest -t moylette/multi-client:$SHA -f client/Dockerfile ./client/
+docker build -t moylette/multi-server:latest -t moylette/multi-server:$SHA  -f server/Dockerfile ./server/
+docker build -t moylette/multi-worker:latest -t moylette/multi-worker:$SHA  -f worker/Dockerfile ./worker/
 docker push moylette/multi-client:latest
 docker push moylette/multi-client:$SHA
 docker push moylette/multi-server:latest
