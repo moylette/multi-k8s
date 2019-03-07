@@ -16,7 +16,7 @@ before_install:
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t moylette/react-test -f ./client/Dockerfile.Dev ./client
-scripts:
+script:
   - docker run moylette/react-test npm test -- --coverage
 deploy:
   provider: script
