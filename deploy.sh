@@ -7,7 +7,7 @@ docker push moylette/multi-server:latest
 docker push moylette/multi-server:$SHA
 docker push moylette/multi-worker:latest
 docker push moylette/multi-worker:$SHA
-kubectl apply -f k8s
+kubectl apply -f k8s-google-cloud
 kubectl set image deployments/client-deployment client=moylette/multi-client:$SHA
 kubectl set image deployments/server-deployment server=moylette/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=moylette/multi-worker:$SHA
