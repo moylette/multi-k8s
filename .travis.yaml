@@ -17,7 +17,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t moylette/react-test -f ./client/Dockerfile.Dev ./client
 scripts:
-  - docker run moylette/react-test npm run test -- --coverage
+  - docker run moylette/react-test npm test -- --coverage
 deploy:
   provider: script
   script: bash ./deploy.sh
